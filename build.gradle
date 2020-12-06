@@ -29,7 +29,7 @@ dependencies {
     compile "com.novemberain:quartz-mongodb:2.2.0-rc2"
     implementation 'com.github.lalyos:jfiglet:0.0.3'
     compileOnly 'org.projectlombok:lombok'
-    compile 'io.swagger.core.v3:swagger-core:2.1.6'
+    compile 'org.springdoc:springdoc-openapi-ui:1.2.32'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
