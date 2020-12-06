@@ -1,0 +1,41 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.0'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java'
+}
+
+group = 'com.onloadcode.quarts.lesson'
+version = '0.0.1'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+        maven {
+            url "https://dl.bintray.com/michaelklishin/maven/"
+        }
+    }
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    implementation 'org.springframework.boot:spring-boot-starter-quartz'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation("org.mongodb:mongodb-driver-sync:4.0.5")
+    compile "com.novemberain:quartz-mongodb:2.2.0-rc2"
+    implementation 'com.github.lalyos:jfiglet:0.0.3'
+    compileOnly 'org.projectlombok:lombok'
+    compile 'io.swagger.core.v3:swagger-core:2.1.6'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.projectreactor:reactor-test'
+}
+
+test {
+    useJUnitPlatform()
+}
